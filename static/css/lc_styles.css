@@ -1,7 +1,7 @@
 :root {
     --main_color: #009aad;
     --additional_color: white;
-    --fone_menu_color: black;
+    --background_menu_color: black;
 
     --header_height: 81px;
 
@@ -44,7 +44,7 @@ body {
 header {
     height: var(--header_height);
     width: 100vw;
-    background-color: var(--fone_menu_color);
+    background-color: var(--background_menu_color);
     display: flex;
     align-items: center;
     border-bottom: var(--main_color) solid 3px;
@@ -121,6 +121,7 @@ nav {
     font-weight: 400;
     font-size: var(--nav_menu_point_font_size);
     line-height: 44px;
+    flex: initial;
 }
 
 nav a {

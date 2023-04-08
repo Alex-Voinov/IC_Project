@@ -1,0 +1,112 @@
+:root {
+    --background_main_page: rgb(226, 226, 226);
+}
+
+#main_page {
+    flex: 1;
+    background-color: var(--background_main_page);
+    display: flex;
+}
+
+#main_content {
+    height: 87%;
+    width: 100%;
+    padding: 4%;
+    display: grid;
+    grid-template-columns: 1fr 1.7fr 1.35fr;
+    grid-template-rows: 1.25fr 1fr 2fr;
+    gap: 4% 4%;
+    grid-auto-flow: row;
+    
+    grid-template-areas:
+        "progress progress ntf"
+        "lessons projects ntf"
+        "msg msg records"
+    
+    }
+
+#main_content > * {
+    background-position: none;
+    object-fit: inherit;
+    background-repeat: no-repeat;
+    background-color: rgb(255, 255, 255);
+}
+#main_content  * {
+    box-sizing: border-box;
+}
+
+
+#msg {
+    
+    grid-area: msg;
+}
+
+#progress {
+
+    grid-area: progress;
+}
+
+#ntf {
+    grid-area: ntf;
+
+}
+
+#lessons {
+    background-image: url('/static/img/form_lessons.svg');
+    grid-area: lessons;
+    
+}
+
+#lessons_title_space{
+    position: absolute;
+    top: -2%;
+    left: 0%;
+    width: 102%;
+    height: 33%;
+    background-color: var(--background_main_page);
+    z-index: 2;
+}
+
+#lessons_title_big{
+    position: absolute;
+    top: 0%;
+    left: -2px;
+    width: 85%;
+    height: 33%;
+    background-color: black;
+    border-radius: 30px 50px 0px 0px;
+    z-index: 3;
+}
+
+
+#lessons_title_mini{
+    position: absolute;
+    top: 18%;
+    left: 2px;
+    width: 100%;
+    height: 15%;
+    background-color: black;
+    border-radius: 0% 7% 0% 0%;
+    z-index: 3; 
+}
+
+#lessons_title_right_space{
+    position: absolute;
+    top: 0%;
+    left: 79%;
+    width: 22%;
+    height: 25%;
+    background-color: var(--background_main_page);
+    border-radius: 0 0 0 50px;
+    z-index: 4; 
+}
+
+
+
+#projects {
+    grid-area: projects;
+}
+
+#records {
+    grid-area: records;
+}
